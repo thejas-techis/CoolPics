@@ -6,11 +6,11 @@ function Header() {
     <>
       <header class="head">
         <div class="logo">
-          <img src={logo} alt=""/>
+         <a href="/"> <img src={logo} alt=""/> </a>
         </div>
         <div class="favs">
-          <h1>FAVORITE</h1>
-          <h1>CATEGORY</h1>
+          <a href="/favorite"><h1>FAVORITE</h1></a>
+          <a href="/category"><h1>CATEGORY</h1></a>
         </div>
       </header>
     </>

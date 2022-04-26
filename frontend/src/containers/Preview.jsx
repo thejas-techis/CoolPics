@@ -1,6 +1,4 @@
 import React from 'react'
-import Footer from '../components/Common/Footer'
-import Header from '../components/Common/Header'
 import img5 from "../assets/img/img5.png"
 import img9 from "../assets/img/img9.png"
 import img10 from "../assets/img/img10.png"
@@ -12,7 +10,6 @@ function Preview() {
   return (
     <section class="page3">
       <div class="blur">
-        <Header/>
         <Images />
       </div>
       <section class="preview">
@@ -24,7 +21,6 @@ function Preview() {
         <img src={img15} alt="" />
         </div>  
         </section>
-        <Footer/>
     </section>
   )
 }
