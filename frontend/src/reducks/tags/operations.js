@@ -1,4 +1,5 @@
 import API from "../../API";
+
 import { fetchTagsAction } from "./actions";
 
 const api = new API();

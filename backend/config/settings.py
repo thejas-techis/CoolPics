@@ -50,6 +50,7 @@ INSTALLED_APPS = [
     'django_filters',
     'apps.images',
     'apps.tags',
+    
 ]
 
 MIDDLEWARE = [
@@ -157,14 +158,14 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 cloudinary.config(
-    cloud_name="techis",
-    api_key="886187759951178",
-    api_secret="WGcWrWfkPlxdOCdlFaLTdjSNtfo",
+    cloud_name="db7seyozi",
+    api_key="289448946988975",
+    api_secret="X0mFxvz_iFJqz6s6IbtzSp3f1Fw",
     secure=True
 )
 
 REST_FRAMEWORK = {
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
-    'PAGE_SIZE': 10
+    'PAGE_SIZE': 20
 }

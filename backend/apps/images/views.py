@@ -6,7 +6,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 
 class ImageList(generics.ListAPIView):
     # Get all posts, limit = 20
-    queryset = Image.objects.order_by('-created_at')
+    queryset = Image.objects.order_by('created_at').all()
     serializer_class = ImageSerializer
     filter_backends = [DjangoFilterBackend, filters.SearchFilter]
     filterset_fields = ['tag']

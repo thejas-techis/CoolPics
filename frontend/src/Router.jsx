@@ -1,18 +1,20 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import Category from './containers/Category';
-import Favorite from './containers/Favorite';
+import Favourite from "./containers/Favourite"
+import Favorites from './containers/Favourite';
 import Home from './containers/Home';
-import Preview from './containers/Preview';
+import Preview from './components/Common/Preview';
 import Search from './containers/Search';
+import Categories from './containers/Categories';
+
 
 const Router = () => {
     return (
         <>
             <Switch>
                 <Route exact path={'/'} component={Home} />
-                <Route exact path={'/category'} component={Category} />
-                <Route exact path={'/favorite'} component={Favorite} />
+                <Route exact path={'/categories'} component={Categories} />
+                <Route exact path={'/favourite'} component={Favourite} />
                 <Route exact path={'/preview'} component={Preview} />
                 <Route exact path={'/search'} component={Search} />
             </Switch>
