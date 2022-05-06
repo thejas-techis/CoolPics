@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { getFavourites } from '../reducks/favourites/selectors';
 import Preview from '../components/Common/Preview';
 import like from '../assets/img/like.svg';
+import { push } from 'connected-react-router';
 
 export default function Favorite() {
     const dispatch = useDispatch();
@@ -11,14 +12,16 @@ export default function Favorite() {
     const favourites = getFavourites(selector);
     const [showPreview, setShowPreview] = useState(false);
     const [selectedImageId, setSelectedImageId] = useState(null);
-    const clickImage = imageId => {
+    const clickImage = (imageId) => {
         setSelectedImageId(imageId);
         setShowPreview(true);
+        dispatch(push('/Preview'));
     };
-    console.log(favourites);
+
     useEffect(() => {
         dispatch(fetchFromLocalStorage());
     }, []);
+    
     return (
         <>
             <div class="body">

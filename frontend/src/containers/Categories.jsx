@@ -6,7 +6,7 @@ import { getFavourites } from '../reducks/favourites/selectors';
 import { addFavourite, fetchFromLocalStorage } from '../reducks/favourites/operations';
 import like from '../assets/img/like.svg';
 import Preview from '../components/Common/Preview';
-
+import { push } from 'connected-react-router';
 import { getTags } from '../reducks/tags/selectors';
 
 const Categories = tag => {
@@ -26,20 +26,22 @@ const Categories = tag => {
         setPage(page + 1);
     }, []);
 
-    const clickImage = imageId => {
+    const clickImage = (imageId) => {
         setSelectedImageId(imageId);
         setShowPreview(true);
+        dispatch(push('/Preview/'));
     };
 
     const clickFavourite = image => {
         dispatch(addFavourite(image));
     };
+
     return (
         <>
             <div class="body">
                 <h1>Categories</h1>
                 <p>Choose your backgrounds</p>
-
+                {console.log("selected image",selectedImageId)}
                 {showPreview && <Preview setShowPreview={setShowPreview} selectedImageId={selectedImageId} />}
                 {tags &&
                     tags.map(t => {
@@ -62,9 +64,11 @@ const Categories = tag => {
                                                                             image.image
                                                                         }
                                                                         alt=""
-                                                                        onClick={() => clickImage(image.id)}
+                                                                        onClick={() => clickImage(
+                                                                        image.id)}
                                                                     />
                                                                 )}
+                                                                {console.log("image",image.id)}
                                                                 {image &&
                                                                     Object.values(favourites).filter(
                                                                         favouriteImage => image.id == favouriteImage.id

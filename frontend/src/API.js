@@ -20,7 +20,7 @@ const api = axios.create({
 export default class API {
   getPosts = async () => {
     const posts = await api
-      .get("/posts/")
+      .get("/images/")
       .then((response) => {
         return response.data;
       })

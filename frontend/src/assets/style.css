@@ -63,9 +63,7 @@ header p {
     width: 100%;
     margin-top: 3%;
 }
-.imgs {
-   
-}
+
 .img {
     width: 100%;
     display: grid;
@@ -203,4 +201,40 @@ h1.thin {
     margin-left: 5%;
     position: relative;
     margin-bottom: 3%;
+}
+img.preview-main1 {
+    width: 50%;
+    margin-left: 57%;
+    position: absolute;
+    top: 8vw;
+}
+
+img.preview-main2 {
+    width: 72%;
+    margin-left: 45%;
+    position: absolute;
+    top: 43vw;
+}
+
+img.preview-main3 {
+    width: 1.5%;
+    margin-left: 114%;
+    position: absolute;
+    top: 1vw;
+}
+
+.preview-main4 {
+    margin-left: 48%;
+    position: absolute;
+    bottom: -1vw;
+    color: #FFFFFF;
+    font-size: 2vw;
+}
+
+
+img.preview-main5 {
+    width: 72%;
+    margin-left: 45%;
+    position: absolute;
+    top: 4vw;
 }
