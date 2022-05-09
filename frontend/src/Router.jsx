@@ -1,7 +1,6 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import Favourite from "./containers/Favourite"
-import Favorites from './containers/Favourite';
+import Favourite from "./containers/Favourite";
 import Home from './containers/Home';
 import Preview from './components/Common/Preview';
 import Search from './containers/Search';

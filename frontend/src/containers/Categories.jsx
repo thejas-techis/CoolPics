@@ -29,7 +29,7 @@ const Categories = tag => {
     const clickImage = (imageId) => {
         setSelectedImageId(imageId);
         setShowPreview(true);
-        dispatch(push('/Preview/'));
+        // dispatch(push('/Preview/'));
     };
 
     const clickFavourite = image => {
@@ -41,8 +41,8 @@ const Categories = tag => {
             <div class="body">
                 <h1>Categories</h1>
                 <p>Choose your backgrounds</p>
-                {console.log("selected image",selectedImageId)}
-                {showPreview && <Preview setShowPreview={setShowPreview} selectedImageId={selectedImageId} />}
+           
+                {showPreview && <Preview setShowPreview={setShowPreview} selectedImageId={selectedImageId}  />}
                 {tags &&
                     tags.map(t => {
                         return (
@@ -55,8 +55,8 @@ const Categories = tag => {
                                                 {image &&
                                                     image.map(image => {
                                                         return (
-                                                            <div class="image" key={image.id}>
-                                                                {/* <h1>{tag.name}</h1> */}
+                                                            <div class="image" >
+
                                                                 {image.tag[0] === t.id && (
                                                                     <img
                                                                         src={
@@ -68,7 +68,7 @@ const Categories = tag => {
                                                                         image.id)}
                                                                     />
                                                                 )}
-                                                                {console.log("image",image.id)}
+
                                                                 {image &&
                                                                     Object.values(favourites).filter(
                                                                         favouriteImage => image.id == favouriteImage.id

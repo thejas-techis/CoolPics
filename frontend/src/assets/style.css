@@ -213,7 +213,7 @@ img.preview-main2 {
     width: 72%;
     margin-left: 45%;
     position: absolute;
-    top: 43vw;
+    top: 40vw;
 }
 
 img.preview-main3 {
@@ -226,7 +226,7 @@ img.preview-main3 {
 .preview-main4 {
     margin-left: 48%;
     position: absolute;
-    bottom: -1vw;
+    bottom: 2vw;
     color: #FFFFFF;
     font-size: 2vw;
 }

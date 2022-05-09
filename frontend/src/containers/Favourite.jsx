@@ -15,9 +15,9 @@ export default function Favorite() {
     const clickImage = (imageId) => {
         setSelectedImageId(imageId);
         setShowPreview(true);
-        dispatch(push('/Preview'));
+        // dispatch(push('/Preview'));
     };
-
+console.log('selectedImageId',selectedImageId);
     useEffect(() => {
         dispatch(fetchFromLocalStorage());
     }, []);

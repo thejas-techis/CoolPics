@@ -98,41 +98,4 @@ export default class API {
       });
     return tags;
   };
-
-
-//   getImages = async params => {
-//     let url = '/images/';
-//     let query = new URLSearchParams();
-//     for (const key in params) {
-//         if (params[key] != null) {
-//             query.append(key, params[key]);
-//         }
-//     }
-
-//     if (query.toString() !== '') {
-//         url += '?' + query.toString();
-//     }
-//     const places = await api
-//         .get(url)
-//         .then(response => {
-//             console.log(response.data);
-//             return response.data;
-//         })
-//         .catch(error => {
-//             throw new Error(error);
-//         });
-//     return places;
-// };
-
-// getImage = async id => {
-//     const images = await api
-//         .get('/images/' + id + '/')
-//         .then(response => {
-//             return response.data;
-//         })
-//         .catch(error => {
-//             throw new Error(error);
-//         });
-//     return images;
-// };
 }
